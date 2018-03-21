@@ -1,4 +1,4 @@
-require_relative "../confi/environment.rb"
+require_relative "../config/environment.rb"
 
 class Dog
   attr_accessor :name, :breed
