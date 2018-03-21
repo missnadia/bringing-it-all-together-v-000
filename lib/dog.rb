@@ -1,7 +1,8 @@
 require_relative "../config/environment.rb"
 
 class Dog
-  attr_accessor :name, :breed, :id
+  attr_accessor :name, :breed
+  attr_reader :id
 
   def initialize(id = nil, name, breed)
     @id = id
@@ -42,7 +43,7 @@ class Dog
   end
 
   def self.create(name:, breed:)
-    dog = Dog.new(name, breed)
+    dog = Dog.new(name: name, breed: breed)
     dog.save
     dog
   end
